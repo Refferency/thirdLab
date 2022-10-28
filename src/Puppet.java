@@ -2,7 +2,6 @@ import static java.lang.Math.pow;
 import static java.lang.StrictMath.sqrt;
 
 public class Puppet extends Theatre{
-    //параметры, присущие наследнику - влияют на ticketPriceGenerator
 
     {
         typeName = "puppet";
@@ -30,16 +29,11 @@ public class Puppet extends Theatre{
 
     @Override
     public double getAdditionalRatio(String[] info){
-        double decorQuality, puppetCountRatio, sceneSizeRatio; //возможно стоит вывести в поля класса
 
-        //определение коэфициента качества декораций
-        decorQuality = Integer.parseInt(info[0]) * 0.5;
 
-        //определение коэфициента количества кукол
-        puppetCountRatio = sqrt(Integer.parseInt(info[1])) * 0.1;
-
-        //определение коэфициента от размера сцены (отопление нынче дорогое)
-        sceneSizeRatio = pow(Integer.parseInt(info[2]), 2) * 0.0005;
+        double decorQuality = Integer.parseInt(info[0]) * 0.5;  //определение коэфициента качества декораций
+        double puppetCountRatio = sqrt(Integer.parseInt(info[1])) * 0.1; //определение коэфициента количества кукол
+        sceneSizeRatio = pow(Integer.parseInt(info[2]), 2) * 0.0005; //определение коэфициента от размера сцены
 
         return priceRatio + decorQuality + puppetCountRatio + sceneSizeRatio;
     }
