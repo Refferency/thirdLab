@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f8280353-980e-4977-bd24-37b46b077403" name="Changes" comment="CHTO">
+    <list default="true" id="f8280353-980e-4977-bd24-37b46b077403" name="Changes" comment="CHTO finalka">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Drama.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Drama.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Puppet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Puppet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Theatre.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Theatre.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -62,7 +60,8 @@
       <workItem from="1666847361828" duration="6984000" />
       <workItem from="1666875817556" duration="13266000" />
       <workItem from="1666937313618" duration="4257000" />
-      <workItem from="1666969432469" duration="9502000" />
+      <workItem from="1666969432469" duration="10325000" />
+      <workItem from="1667019638320" duration="1736000" />
     </task>
     <task id="LOCAL-00001" summary="CHTO">
       <created>1666890785485</created>
@@ -71,7 +70,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666890785485</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="CHTO finalka">
+      <created>1666981692561</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1666981692561</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -90,7 +96,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="CHTO" />
-    <option name="LAST_COMMIT_MESSAGE" value="CHTO" />
+    <MESSAGE value="CHTO finalka" />
+    <option name="LAST_COMMIT_MESSAGE" value="CHTO finalka" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

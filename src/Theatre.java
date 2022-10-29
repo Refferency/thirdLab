@@ -9,7 +9,6 @@ public abstract class Theatre {
     private int rating;                 //рейтинг театра (от 1 до 10)
     private int ticketPrice;            //цена билета
     private static final ArrayList<Theatre> listOfTheatre = new ArrayList<>();
-
     //доп. параметры для генератора цены билета (коэфициенты)
     protected String typeName = null;   //тип театра
     protected String typeNameForOutput = null;
@@ -21,17 +20,18 @@ public abstract class Theatre {
     }
 
     public Theatre(String name, int rating, String director) {
-
         for (Theatre th : listOfTheatre) {
             if (th.name.equalsIgnoreCase(name)) {
                 throw new IllegalArgumentException("Театр с имененм " + name + " уже существует!");
             }
         }
-
-        listOfTheatre.add(this);
+        nameIsEmpty(name);
         this.name = name;
+        checkingRating(rating);
         this.rating = rating;
+        nameIsEmpty(name);
         this.artDirector = director;
+        listOfTheatre.add(this);
     }
 
     protected abstract String getTypeName();
@@ -250,7 +250,6 @@ public abstract class Theatre {
             ticketPriceGeneratorPattern(th);
     }
 
-
     //Сгенерировать цену билета исходя из некоторых параметров !
     public static void ticketPriceGenerator(){
         System.out.println("\u001B[34m" + "Генератор цены билета для театра: " + "\u001B[0m");
@@ -270,8 +269,6 @@ public abstract class Theatre {
 
         ticketPriceGeneratorPattern(th);
     }
-
-
     private static void ticketPriceGeneratorPattern(Theatre th){
         System.out.print(th.getFancyInfo());
         Scanner in = new Scanner(System.in);
@@ -312,19 +309,15 @@ public abstract class Theatre {
                 throw new IllegalArgumentException("Качество декораций варьируется от 1 до 5 (включительно)");
             }
         }
-
-
-
         double ratio = th.getAdditionalRatio(info);
         th.ticketPrice = (int)(ratio + th.rating) * 300;
         System.out.println("\u001B[32m" + "Цена, сгенерированная для данного театра: " + "\u001B[0m" + th.ticketPrice + "\n");
     }
 
 
-
-
     //сформировать коэф цены от некоторых параметров !
     protected abstract double getAdditionalRatio(String[] info);
+
 
     //проверка рейтинга !
     private static void checkingRating(int rating){
@@ -333,7 +326,6 @@ public abstract class Theatre {
             throw new IllegalArgumentException("Рейтинг театра должен находится в диапазоне от " + ratingLimits[0] + " до " + ratingLimits[1]);
         }
     }
-
     //проверка имени !
     private static void nameIsEmpty(String name){
         if (name.isEmpty()) {
